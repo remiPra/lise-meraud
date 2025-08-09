@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crânes en pierre – Lise Méraud</title>
+  <meta name="description" content="Sculptures de crânes en pierre par Lise Méraud : marbres, grès, œuvres uniques. Commande sur‑mesure." />
+  <link rel="canonical" href="https://ton-domaine.fr/" />
+
+  <!-- Tailwind (CDN pour proto). En prod : build + purge -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Garde tes couleurs et ta police : on fixe via CSS variables.
+    // Si ton thème actuel utilise déjà Tailwind + classes, on conserve l'apparence.
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            // remplace par ta police actuelle si nécessaire (ex: 'Cormorant', 'Inter', etc.)
+            display: ["ui-serif", "Georgia"],
+            body: ["ui-sans-serif", "system-ui"],
+          },
+          colors: {
+            // Palette existante (ajuste aux couleurs actuelles si besoin)
+            primary: {
+              DEFAULT: "#6b4e2e", // brun doré doux
+              50: "#faf6f1",
+              100: "#f5ede4",
+              200: "#e8d9c6",
+              300: "#d8c1a4",
+              400: "#c8a781",
+              500: "#b68e64",
+              600: "#9c744a",
+              700: "#825e38",
+              800: "#6b4e2e",
+              900: "#4a371f"
+            },
+            ink: "#1f2430",
+            paper: "#fffaf3"
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.12)",
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadeUp: 'fadeUp .8s ease-out both'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root{
+      --bg-paper:#fffaf3; /* garde l'esprit clair et doux */
+      --text-ink:#1f2430;
+    }
+    html,body{background:var(--bg-paper); color:var(--text-ink);}    
+    /* Parallax simple (background-attachment: fixed pour sections décor) */
+    .parallax-bg{ background-attachment: fixed; background-size: cover; background-position: center; }
+    /* Apparition douce si prefers-reduced-motion = no-preference */
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{ opacity:0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+      .reveal.in{ opacity:1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Laisse tes URLs d'images telles quelles : on lit window.__GALLERY__ si présent (assets.js) -->
+  <script src="./assets.js"></script>
+</head>
+<body class="font-body antialiased">
+  <!-- Barre de nav collante -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-paper/70 border-b border-primary/10">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#accueil" class="text-lg md:text-xl font-display tracking-wide text-primary-800">CRÂNES EN PIERRE <span class="sr-only">– Lise Méraud</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#galerie" class="hover:text-primary-700">Galerie</a>
+        <a href="#a-propos" class="hover:text-primary-700">À propos</a>
+        <a href="#commander" class="hover:text-primary-700">Commander</a>
+        <a href="#contact" class="hover:text-primary-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO avec parallax -->
+  <section id="accueil" class="relative h-[70vh] md:h-[85vh] flex items-end">
+    <div class="absolute inset-0 parallax-bg" style="background-image:url('https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_140100-705x1024.jpg');"></div>
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-4 pb-16">
+      <h1 class="font-display text-3xl md:text-5xl text-white drop-shadow-md animate-fadeUp">Crânes en pierre<br><span class="text-primary-200">par Lise Méraud</span></h1>
+      <p class="mt-4 max-w-2xl text-white/90">Œuvres sculptées à la main – marbre, grès. Symboles vivants, langage de l’âme. Pièces uniques et commandes sur‑mesure.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="#galerie" class="inline-flex items-center rounded-full bg-white/90 hover:bg-white text-ink px-5 py-2 shadow-soft">Découvrir la galerie</a>
+        <a href="#commander" class="inline-flex items-center rounded-full border border-white/70 text-white px-5 py-2 hover:bg-white/10">Commander une sculpture</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accroche courte -->
+  <section class="mx-auto max-w-4xl px-4 py-12 text-center">
+    <p class="reveal text-base md:text-lg">« Ces sculptures sont taillées dans le recueillement du cœur, à l’écoute du chant de l’univers. Les motifs gravés sont des symboles vivants, une musique qui parle à l’âme. »</p>
+  </section>
+
+  <!-- GALERIE : rendu automatique depuis window.__GALLERY__ (assets.js) -->
+  <section id="galerie" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-display mb-6">Galerie</h2>
+    <div id="gallery-root" class="space-y-14"></div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="a-propos" class="relative">
+    <div class="parallax-bg absolute inset-0 opacity-10" style="background-image:url('https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_193236-1024x577.jpg');"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-[1fr,1.2fr] gap-8">
+      <div class="reveal">
+        <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/AtelierLM-682x1024.jpg" alt="Lise Méraud – à l’atelier" width="682" height="1024" class="w-full h-auto rounded-2xl shadow-soft object-cover"/>
+      </div>
+      <div class="reveal">
+        <h2 class="text-2xl md:text-3xl font-display mb-4">À propos de Lise</h2>
+        <p class="leading-relaxed">Bercée dès l’enfance par les arts, les civilisations anciennes, les symboles et l’ésotérisme, Lise s’est formée, à 19 ans, à la taille de pierre chez les Compagnons du Devoir. Amour des roches, goût du geste précis, quête de sens : son parcours marie artisanat d’excellence et chemin spirituel.</p>
+        <p class="mt-4 leading-relaxed">Après un cycle consacré aux thérapies naturelles et à l’accompagnement, la rencontre avec les crânes de cristal s’impose. Lise explore leurs mémoires, élargit sa médiumnité, et accompagne des personnes en cercle ou en séance individuelle. Guidée par la tradition des 13 Mères Originelles, une voix intérieure lui souffle : « Sculpte des crânes Mères ». Depuis, une famille de crânes naît dans la pierre.</p>
+        <p class="mt-4 leading-relaxed">Chaque sculpture est réalisée dans le recueillement du cœur. Les gravures – spirales, mandorles, étoile des directions – sont des langages vivants. À travers elles, Lise souhaite offrir amour, ancrage et clarté à notre humanité.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMANDER -->
+  <section id="commander" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-display mb-6">Commander une sculpture</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="reveal space-y-4">
+        <p class="leading-relaxed">Commander un crâne est une démarche transformatrice : une rencontre avec vous‑même. Reliée à votre énergie, Lise se laisse guider vers les symboles et la roche qui vous accompagneront au mieux. La sculpture devient un objet de pouvoir – un compagnon d’évolution.</p>
+        <ul class="list-disc list-inside text-sm leading-7">
+          <li><span class="font-medium">Délai</span> : 5 à 10 semaines</li>
+          <li><span class="font-medium">Tarifs indicatifs</span> : 800 € à 2 200 € (petits formats) · 3 000 € à 8 000 € (grands formats)</li>
+          <li><span class="font-medium">Matières</span> : grès (plus rapide/abordable), marbre (plus précieux/temps long)</li>
+          <li><span class="font-medium">Acompte</span> : 300 € (lancement matériaux)</li>
+          <li><span class="font-medium">Authenticité</span> : certificat, signature discrète</li>
+        </ul>
+      </div>
+      <form class="reveal bg-white/70 rounded-2xl p-6 shadow-soft grid gap-4" onsubmit="event.preventDefault();alert('Merci ! Lise vous recontactera rapidement.');">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="block text-sm">Prénom<input required class="mt-1 w-full rounded-md border border-primary/20 px-3 py-2" type="text"/></label>
+          <label class="block text-sm">Nom<input required class="mt-1 w-full rounded-md border border-primary/20 px-3 py-2" type="text"/></label>
+        </div>
+        <label class="block text-sm">Email<input required class="mt-1 w-full rounded-md border border-primary/20 px-3 py-2" type="email"/></label>
+        <label class="block text-sm">Téléphone<input class="mt-1 w-full rounded-md border border-primary/20 px-3 py-2" type="tel"/></label>
+        <label class="block text-sm">Votre intention / symboles souhaités<textarea class="mt-1 w-full rounded-md border border-primary/20 px-3 py-2" rows="4"></textarea></label>
+        <button class="mt-2 inline-flex items-center justify-center rounded-md bg-primary text-white px-4 py-2 hover:bg-primary-700">Envoyer ma demande</button>
+        <p class="text-xs text-ink/60">Ou contactez‑moi : 06 50 88 83 24 · lisemeraud@orange.fr</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT + assurances -->
+  <section id="contact" class="bg-primary-50 border-y border-primary/10">
+    <div class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-4 gap-6">
+      <div class="md:col-span-2 reveal">
+        <h3 class="font-display text-xl mb-2">Contact</h3>
+        <p>📞 06 50 88 83 24<br/>✉️ lisemeraud@orange.fr</p>
+        <p class="mt-4 text-sm text-ink/70">Paiement sécurisé (SSL) · PayPal 4x · Livraison domicile / point relais · Conditions de retour</p>
+      </div>
+      <div class="reveal">
+        <h4 class="font-medium mb-2">Infos</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:text-primary-700">Déclaration de Confidentialité</a></li>
+          <li><a href="#" class="hover:text-primary-700">Politique de Cookies</a></li>
+          <li><a href="#" class="hover:text-primary-700">Conditions Générales</a></li>
+          <li><a href="#" class="hover:text-primary-700">Avertissement</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h4 class="font-medium mb-2">Réseaux · Amis</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:text-primary-700">Drums Of The Earth</a></li>
+          <li><a href="#" class="hover:text-primary-700">Midori Musique</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm py-6 text-ink/60">© 2023 – Tambours de la Terre · Réalisé par Le Geek Zen</footer>
+
+  <!-- LIGHTBOX minimal accessible -->
+  <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-[60]" role="dialog" aria-modal="true">
+    <button class="absolute top-4 right-4 text-white text-3xl" aria-label="Fermer">×</button>
+    <img alt="" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl" />
+  </div>
+
+  <script>
+    // Apparition au scroll
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        els.forEach(el=>el.classList.add('in'));
+        return;
+      }
+      const io = new IntersectionObserver((entries)=>{
+        for (const e of entries){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }
+      },{rootMargin:'0px 0px -10% 0px'});
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Rendu GALERIE (garde les URLs telles quelles via window.__GALLERY__)
+    (function(){
+      const data = window.__GALLERY__ || [];
+      const root = document.getElementById('gallery-root');
+      if(!root) return;
+      if(!data.length){
+        root.innerHTML = '<p class="text-ink/60">Aucune image à afficher pour le moment.</p>';
+        return;
+      }
+      const frag = document.createDocumentFragment();
+      data.forEach(group => {
+        const wrap = document.createElement('section');
+        wrap.id = group.id;
+        wrap.className = 'space-y-4';
+        const h3 = document.createElement('h3');
+        h3.className = 'text-xl md:text-2xl font-semibold';
+        h3.textContent = group.name;
+        wrap.appendChild(h3);
+        const grid = document.createElement('div');
+        grid.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4';
+        group.items.forEach(item => {
+          const btn = document.createElement('button');
+          btn.className = 'group relative aspect-[3/4] w-full overflow-hidden rounded-xl shadow hover:shadow-lg transition';
+          btn.setAttribute('data-lightbox-src', item.src);
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.alt || group.name;
+          img.loading = 'lazy';
+          img.width = item.w; img.height = item.h;
+          img.className = 'absolute inset-0 h-full w-full object-cover';
+          btn.appendChild(img);
+          grid.appendChild(btn);
+        });
+        wrap.appendChild(grid);
+        frag.appendChild(wrap);
+      });
+      root.appendChild(frag);
+    })();
+
+    // Lightbox
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const lbImg = lb.querySelector('img');
+      const lbClose = lb.querySelector('button');
+      document.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-lightbox-src]');
+        if(!b) return;
+        lbImg.src = b.getAttribute('data-lightbox-src');
+        lb.classList.remove('hidden');
+      });
+      lbClose.addEventListener('click', ()=> lb.classList.add('hidden'));
+      lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.add('hidden'); });
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') lb.classList.add('hidden'); });
+    })();
+  </script>
+</body>
+</html>
