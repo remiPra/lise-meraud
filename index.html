@@ -787,7 +787,7 @@
             </div>
         </div>
     </section>
-
+    
     <section id="evenements" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/20">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
@@ -798,40 +798,119 @@
                     Retrouvez Lise Méraud et ses créations lors de ces événements
                 </p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Symposium de Sculpture -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Symposium de Sculpture</h3>
-                    <p class="text-gray-700 mb-2">🗓️ **Dates :** 13-14 septembre 2025</p>
-                    <p class="text-gray-700 mb-2">📍 **Lieu :** Boissezon</p>
-                    <p class="text-gray-700 mb-4">✨ **Thème :** Sculpteur sur pierre</p>
-                    <a href="https://www.facebook.com/symposiumdesculpture" target="_blank" class="text-gold hover:underline font-semibold">
-                        En savoir plus sur Facebook
-                    </a>
+                    <div class="flex gap-6">
+                        <img src="assets/SYMPOSIUM_DE_SCULPTURE.jpeg" 
+                             alt="Affiche Symposium de Sculpture" 
+                             class="w-64 h-88 object-cover rounded-lg flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                             onclick="openModal('symposium')">
+                        <div class="flex-1">
+                            <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Symposium de Sculpture</h3>
+                            <p class="text-gray-700 mb-2">Dates : 13-14 septembre 2025</p>
+                            <p class="text-gray-700 mb-2">Lieu : Boissezon</p>
+                            <p class="text-gray-700 mb-4">Thème : Sculpteur sur pierre</p>
+                            <a href="https://www.facebook.com/symposiumdesculpture" target="_blank" class="text-gold hover:underline font-semibold">
+                                En savoir plus sur Facebook
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
+    
+                <!-- Festival Sens & Nature -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Festival Sens & Nature</h3>
-                    <p class="text-gray-700 mb-2">🗓️ **Date :** Dimanche 28 septembre 2025</p>
-                    <p class="text-gray-700 mb-2">📍 **Lieu :** Toulouse</p>
-                    <p class="text-gray-700 mb-4">⏰ **Horaires :** 10h-18h</p>
-                    <a href="https://www.alternativebox.fr" target="_blank" class="text-gold hover:underline font-semibold">
-                        Entrée libre - Infos sur Facebook
-                    </a>
+                    <div class="flex gap-6">
+                        <img src="./assets/FESTIVAL_SENS_ET_NATURE.jpeg" 
+                             alt="Affiche Festival Sens & Nature" 
+                             class="w-64 h-88 object-cover rounded-lg flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                             onclick="openModal('festival')">
+                        <div class="flex-1">
+                            <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Festival Sens & Nature</h3>
+                            <p class="text-gray-700 mb-2">Date : Dimanche 28 septembre 2025</p>
+                            <p class="text-gray-700 mb-2">Lieu : Toulouse</p>
+                            <p class="text-gray-700 mb-4">Horaires : 10h-18h</p>
+                            <a href="https://www.alternativebox.fr" target="_blank" class="text-gold hover:underline font-semibold">
+                                Entrée libre - Infos sur Facebook
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Salon Échos de l'Au-delà</h3>
-                    <p class="text-gray-700 mb-2">🗓️ **Dates :** Du 31 juillet au 2 août 2025</p>
-                    <p class="text-gray-700 mb-2">🔗 **Organisateur :** Association Valhall'Art</p>
-                    <p class="text-gray-700 mb-4">🌐 **Site web :** <a href="http://www.echosdelaudela.fr" target="_blank" class="text-gold hover:underline">echosdelaudela.fr</a></p>
-                    <a href="https://www.facebook.com/profile.php?id=61576582765792#" target="_blank" class="text-gold hover:underline font-semibold">
-                        Suivez l'événement sur Facebook
-                    </a>
+    
+                <!-- Salon Échos de l'Au-delà -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300 lg:col-span-2">
+                    <div class="flex gap-6 justify-center">
+                        <div class="max-w-md">
+                            <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Salon Échos de l'Au-delà</h3>
+                            <p class="text-gray-700 mb-2">Dates : Du 31 juillet au 2 août 2025</p>
+                            <p class="text-gray-700 mb-2">Organisateur : Association Valhall'Art</p>
+                            <p class="text-gray-700 mb-4">Site web : <a href="http://www.echosdelaudela.fr" target="_blank" class="text-gold hover:underline">echosdelaudela.fr</a></p>
+                            <a href="https://www.facebook.com/profile.php?id=61576582765792#" target="_blank" class="text-gold hover:underline font-semibold">
+                                Suivez l'événement sur Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal pour les affiches -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+            <div class="relative max-w-4xl max-h-[90vh] overflow-auto">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-gray-300 text-3xl font-bold z-10 bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                    &times;
+                </button>
+                <div id="modal-content">
+                    <!-- Le contenu sera injecté ici -->
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+    function openModal(type) {
+        const modal = document.getElementById('modal');
+        const content = document.getElementById('modal-content');
+        
+        if (type === 'symposium') {
+            content.innerHTML = `
+                <img src="assets/SYMPOSIUM_DE_SCULPTURE.jpeg" 
+                     alt="Affiche Symposium de Sculpture" 
+                     class="w-full h-auto rounded-lg shadow-2xl max-w-3xl">
+            `;
+        } else if (type === 'festival') {
+            content.innerHTML = `
+                <img src="./assets/FESTIVAL_SENS_ET_NATURE.jpeg" 
+                     alt="Affiche Festival Sens & Nature" 
+                     class="w-full h-auto rounded-lg shadow-2xl max-w-3xl">
+            `;
+        }
+        
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Fermer le modal en cliquant à l'extérieur de l'image
+    document.getElementById('modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+    
+    // Fermer le modal avec la touche Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+    </script>
 
     <section id="spiritualite" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/30 relative">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
