@@ -8,10 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuration Tailwind personnalisée -->
     <script>
         tailwind.config = {
             theme: {
@@ -40,7 +38,6 @@
         }
     </script>
     
-    <!-- Styles personnalisés -->
     <style>
         @keyframes shimmer {
             0%, 100% { background-position: 0% 50%; }
@@ -98,14 +95,12 @@
     </style>
 </head>
 <body class="font-cormorant text-gray-800 overflow-x-hidden">
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-light-bg/95 backdrop-blur z-50 py-4 transition-all duration-300">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-4 lg:px-8">
             <div class="font-cinzel text-2xl font-semibold text-primary tracking-wider">
                 Lise Méraud
             </div>
             
-            <!-- Menu Desktop -->
             <div class="hidden md:flex space-x-8">
                 <a href="#accueil" class="nav-link text-gray-800 hover:text-accent transition-colors duration-300 relative group">
                     Accueil
@@ -113,6 +108,10 @@
                 </a>
                 <a href="#oeuvres" class="nav-link text-gray-800 hover:text-accent transition-colors duration-300 relative group">
                     Œuvres
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#evenements" class="nav-link text-gray-800 hover:text-accent transition-colors duration-300 relative group">
+                    Événements
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 <a href="#artiste" class="nav-link text-gray-800 hover:text-accent transition-colors duration-300 relative group">
@@ -125,7 +124,6 @@
                 </a>
             </div>
             
-            <!-- Menu Mobile -->
             <button class="md:hidden hamburger flex flex-col p-2" onclick="toggleMobileMenu()">
                 <span class="w-6 h-0.5 bg-primary mb-1 transition-all duration-300"></span>
                 <span class="w-6 h-0.5 bg-primary mb-1 transition-all duration-300"></span>
@@ -133,16 +131,15 @@
             </button>
         </div>
         
-        <!-- Menu Mobile Dropdown -->
         <div id="mobile-menu" class="md:hidden hidden bg-light-bg/98 px-4 pb-4">
             <a href="#accueil" class="block py-2 text-gray-800 hover:text-accent" onclick="toggleMobileMenu()">Accueil</a>
             <a href="#oeuvres" class="block py-2 text-gray-800 hover:text-accent" onclick="toggleMobileMenu()">Œuvres</a>
+            <a href="#evenements" class="block py-2 text-gray-800 hover:text-accent" onclick="toggleMobileMenu()">Événements</a>
             <a href="#artiste" class="block py-2 text-gray-800 hover:text-accent" onclick="toggleMobileMenu()">L'Artiste</a>
             <a href="#contact" class="block py-2 text-gray-800 hover:text-accent" onclick="toggleMobileMenu()">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="accueil" class="h-screen flex items-center justify-center bg-gradient-to-br from-light-bg to-secondary text-center relative">
         <div class="max-w-4xl px-4 lg:px-8 z-10">
             <h1 class="font-playfair text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 tracking-wider text-shadow hero-title-gradient animate-shimmer">
@@ -160,665 +157,682 @@
             </button>
         </div>
         
-        <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
             <div class="w-0.5 h-10 bg-primary relative animate-scroll-bounce">
                 <div class="absolute bottom-0 -left-1.5 w-3 h-3 border-r-2 border-b-2 border-primary transform rotate-45"></div>
             </div>
         </div>
     </section>
-<!-- Section Œuvres - Version optimisée -->
-<!--  -->
-<!-- Section Présentation Détaillée des Crânes -->
-<section id="cranes-details" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/20">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        
-        <!-- Header de la section -->
-        <div class="text-center mb-20">
-            <h2 class="font-playfair text-4xl md:text-5xl lg:text-6xl text-primary mb-4 tracking-wide">
-                Découvrez Chaque Crâne Mère
-            </h2>
-            <p class="text-xl text-gray-600 italic max-w-2xl mx-auto">
-                Une exploration complète de chaque sculpture, révélant tous leurs aspects sacrés
-            </p>
-        </div>
 
-        <!-- Crâne Amande Double Spirale -->
-        <div class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                <!-- Galerie photos principale -->
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
-                        <!-- Image principale -->
-                        <div class="relative h-96 overflow-hidden group">
-                            <img id="amande-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_140100-705x1024.jpg" 
-                                 alt="Crâne Amande Double Spirale - Vue principale" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-gold to-accent text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
-                                Vue 1/8
-                            </div>
-                        </div>
-                        
-                        <!-- Miniatures -->
-                        <div class="p-6">
-                            <div class="grid grid-cols-4 md:grid-cols-8 gap-3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_140100-705x1024.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-gold opacity-100 hover:opacity-80 transition-opacity"
-                                     onclick="changeMainImage('amande', this.src, 1)"
-                                     alt="Vue 1">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184808-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 2)"
-                                     alt="Vue 2">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184820-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 3)"
-                                     alt="Vue 3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190454-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 4)"
-                                     alt="Vue 4">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184715-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 5)"
-                                     alt="Vue 5">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190111-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 6)"
-                                     alt="Vue 6">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190033-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 7)"
-                                     alt="Vue 7">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185131-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('amande', this.src, 8)"
-                                     alt="Vue 8">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Informations détaillées -->
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-3 h-3 bg-gold rounded-full mr-3 animate-pulse"></div>
-                            <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
-                        </div>
-                        
-                        <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
-                            Crâne Amande Double Spirale
-                        </h3>
-                        
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">🏛️</span>
-                                <span>Marbre blanc de Carrare, Italie</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">📏</span>
-                                <span>H 18 cm × L 23 cm × P 15,5 cm</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">⚖️</span>
-                                <span>Poids approximatif : 2,8 kg</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
-                            <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-gold pl-4">
-                                "J'irradie l'harmonie en chacun et en chaque lieu. Je vous apporte ce qu'il vous manque. 
-                                L'ancrage, la confiance en vous, en vos valeurs, et le courage de les exprimer."
-                            </blockquote>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    ✨ Équilibre
-                                </span>
-                                <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🌟 Harmonie
-                                </span>
-                                <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🏔️ Ancrage
-                                </span>
-                                <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🌀 Double Spirale
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <div class="text-center">
-                                <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
-                                    Prix sur demande
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">Délai de création : 8-10 semaines</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Crâne Étoile -->
-        <div class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
-                        <div class="relative h-96 overflow-hidden group">
-                            <img id="etoile-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_134850-748x1024.jpg" 
-                                 alt="Crâne Étoile - Vue principale" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
-                                Vue 1/7
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_134850-748x1024.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-yellow-400 opacity-100"
-                                     onclick="changeMainImage('etoile', this.src, 1)"
-                                     alt="Vue 1">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191546-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 2)"
-                                     alt="Vue 2">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191541.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 3)"
-                                     alt="Vue 3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191738-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 4)"
-                                     alt="Vue 4">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191655-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 5)"
-                                     alt="Vue 5">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191617-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 6)"
-                                     alt="Vue 6">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191639-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('etoile', this.src, 7)"
-                                     alt="Vue 7">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-3 h-3 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
-                            <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
-                        </div>
-                        
-                        <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
-                            Crâne Étoile
-                        </h3>
-                        
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">🏛️</span>
-                                <span>Grès d'Espagne</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">📏</span>
-                                <span>H 7 cm × L 9 cm × P 6,5 cm</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">⚖️</span>
-                                <span>Poids approximatif : 650g</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
-                            <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-yellow-400 pl-4">
-                                "J'illumine votre chemin, et vous éclaire dans la direction que vous vous choisissez. 
-                                Vous êtes au centre de l'Étoile."
-                            </blockquote>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🧭 Guidance
-                                </span>
-                                <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    💡 Clarté
-                                </span>
-                                <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🎯 Direction
-                                </span>
-                                <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    ⭐ Étoile Sacrée
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <div class="text-center">
-                                <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
-                                    Prix sur demande
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Crâne Rose -->
-        <div class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
-                        <div class="relative h-96 overflow-hidden group">
-                            <img id="rose-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185653-1024x922.jpg" 
-                                 alt="Crâne Rose - Vue principale" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-pink-400 to-rose-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
-                                Vue 1/7
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185653-1024x922.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-pink-400 opacity-100"
-                                     onclick="changeMainImage('rose', this.src, 1)"
-                                     alt="Vue 1">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191031-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 2)"
-                                     alt="Vue 2">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185700-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 3)"
-                                     alt="Vue 3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185721-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 4)"
-                                     alt="Vue 4">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190941-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 5)"
-                                     alt="Vue 5">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191003-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 6)"
-                                     alt="Vue 6">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185619-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('rose', this.src, 7)"
-                                     alt="Vue 7">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-3 h-3 bg-pink-400 rounded-full mr-3 animate-pulse"></div>
-                            <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
-                        </div>
-                        
-                        <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
-                            Crâne Rose
-                        </h3>
-                        
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">🏛️</span>
-                                <span>Marbre rose du Portugal</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">📏</span>
-                                <span>H 6,3 cm × L 8,8 cm × P 6 cm</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">⚖️</span>
-                                <span>Poids approximatif : 420g</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
-                            <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-pink-400 pl-4">
-                                "Je suis ce que vous êtes, je manifeste l'Amour, sans artifice, sans action. 
-                                De moi, émane la douceur d'Être."
-                            </blockquote>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    💖 Amour
-                                </span>
-                                <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🕊️ Douceur
-                                </span>
-                                <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🌿 Simplicité
-                                </span>
-                                <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🌸 Essence Pure
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <div class="text-center">
-                                <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
-                                    Prix sur demande
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Crâne Cœur Lemniscate -->
-        <div class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
-                        <div class="relative h-96 overflow-hidden group">
-                            <img id="coeur-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-1024x663.jpg" 
-                                 alt="Crâne Cœur Lemniscate - Vue principale" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
-                                Vue 1/6
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-1024x663.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-purple-500 opacity-100"
-                                     onclick="changeMainImage('coeur', this.src, 1)"
-                                     alt="Vue 1">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191236-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('coeur', this.src, 2)"
-                                     alt="Vue 2">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191359-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('coeur', this.src, 3)"
-                                     alt="Vue 3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191411-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('coeur', this.src, 4)"
-                                     alt="Vue 4">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('coeur', this.src, 5)"
-                                     alt="Vue 5">
-                                     <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191151-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('coeur', this.src, 6)"
-                                     alt="Vue 6">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-3 h-3 bg-purple-500 rounded-full mr-3 animate-pulse"></div>
-                            <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
-                        </div>
-                        
-                        <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
-                            Crâne Cœur Lemniscate
-                        </h3>
-                        
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">🏛️</span>
-                                <span>Grès d'Espagne</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">📏</span>
-                                <span>H 7 cm × L 9,5 cm × P 6,7 cm</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">⚖️</span>
-                                <span>Poids approximatif : 680g</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
-                            <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-purple-500 pl-4">
-                                "Je diffuse la connaissance avec la beauté du Cœur. J'apaise votre Essence et apporte 
-                                l'harmonie par un mouvement régulier, comme un battement cosmique."
-                            </blockquote>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🧠 Connaissance
-                                </span>
-                                <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🦉 Sagesse
-                                </span>
-                                <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    ∞ Infini
-                                </span>
-                                <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    💜 Cœur Cosmique
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <div class="text-center">
-                                <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
-                                    Prix sur demande
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">Délai de création : 6-8 semaines</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Crâne Bouche Ouverte -->
-        <div class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
-                        <div class="relative h-96 overflow-hidden group">
-                            <img id="bouche-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192126-1024x840.jpg" 
-                                 alt="Crâne Bouche Ouverte - Vue principale" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-gradient-to-r from-gray-600 to-gray-800 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
-                                Vue 1/7
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192126-1024x840.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-gray-600 opacity-100"
-                                     onclick="changeMainImage('bouche', this.src, 1)"
-                                     alt="Vue 1">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191848-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 2)"
-                                     alt="Vue 2">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192038-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 3)"
-                                     alt="Vue 3">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191948-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 4)"
-                                     alt="Vue 4">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191919-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 5)"
-                                     alt="Vue 5">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192152-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 6)"
-                                     alt="Vue 6">
-                                <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_135851-scaled.jpg" 
-                                     class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
-                                     onclick="changeMainImage('bouche', this.src, 7)"
-                                     alt="Vue 7">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="space-y-8">
-                    <div class="bg-white rounded-3xl p-8 shadow-xl">
-                        <div class="flex items-center mb-6">
-                            <div class="w-3 h-3 bg-gray-600 rounded-full mr-3 animate-pulse"></div>
-                            <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
-                        </div>
-                        
-                        <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
-                            Crâne Bouche Ouverte
-                        </h3>
-                        
-                        <div class="space-y-4 text-gray-700">
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">🏛️</span>
-                                <span>Marbre noir de Belgique</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">📏</span>
-                                <span>H 5 cm × L 8,8 cm × P 7,2 cm</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="font-cinzel text-accent mr-2">⚖️</span>
-                                <span>Poids approximatif : 480g</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
-                            <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-gray-600 pl-4">
-                                "Yeux ouverts, bouche qui clame l'interne vers l'externe, 
-                                je diffuse ce qui Est. Je suis réceptacle et messager."
-                            </blockquote>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    🗣️ Communication
-                                </span>
-                                <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    📡 Transmission
-                                </span>
-                                <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    💫 Révélation
-                                </span>
-                                <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-                                    👁️ Vision Intérieure
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200">
-                            <div class="text-center">
-                                <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
-                                    Prix sur demande
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Section Crânes sur Commande -->
-        <div class="mb-16">
-            <div class="text-center mb-12">
-                <h3 class="font-playfair text-3xl md:text-4xl text-primary mb-4 tracking-wide">
-                    Crânes sur Commande
-                </h3>
-                <p class="text-lg text-gray-600 italic">
-                    Créations uniques réalisées en communion avec votre essence
+    <section id="oeuvres" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            
+            <div class="text-center mb-20">
+                <h2 class="font-playfair text-4xl md:text-5xl lg:text-6xl text-primary mb-4 tracking-wide">
+                    Découvrez Chaque Crâne Mère
+                </h2>
+                <p class="text-xl text-gray-600 italic max-w-2xl mx-auto">
+                    Une exploration complète de chaque sculpture, révélant tous leurs aspects sacrés
                 </p>
             </div>
-            
-            <!-- Galerie des commandes -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-face3-copie-300x222.jpg" 
-                         alt="Crâne sur commande 1" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101153-225x300.jpg" 
-                         alt="Crâne sur commande 2" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-contre-plonge-copie-200x300.jpg" 
-                         alt="Crâne sur commande 3" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101220-225x300.jpg" 
-                         alt="Crâne sur commande 4" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-cosmique-Detail-serpent-copie-300x200.jpg" 
-                         alt="Crâne sur commande 5" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101536-225x300.jpg" 
-                         alt="Crâne sur commande 6" 
-                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="relative h-96 overflow-hidden group">
+                                <img id="amande-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_140100-705x1024.jpg" 
+                                    alt="Crâne Amande Double Spirale - Vue principale" 
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-gold to-accent text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
+                                    Vue 1/8
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 md:grid-cols-8 gap-3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_140100-705x1024.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-gold opacity-100 hover:opacity-80 transition-opacity"
+                                        onclick="changeMainImage('amande', this.src, 1)"
+                                        alt="Vue 1">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184808-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 2)"
+                                        alt="Vue 2">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184820-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 3)"
+                                        alt="Vue 3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190454-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 4)"
+                                        alt="Vue 4">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_184715-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 5)"
+                                        alt="Vue 5">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190111-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 6)"
+                                        alt="Vue 6">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190033-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 7)"
+                                        alt="Vue 7">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185131-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gold opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('amande', this.src, 8)"
+                                        alt="Vue 8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-3 h-3 bg-gold rounded-full mr-3 animate-pulse"></div>
+                                <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
+                            </div>
+                            
+                            <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
+                                Crâne Amande Double Spirale
+                            </h3>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">🏛️</span>
+                                    <span>Marbre blanc de Carrare, Italie</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">📏</span>
+                                    <span>H 18 cm × L 23 cm × P 15,5 cm</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">⚖️</span>
+                                    <span>Poids approximatif : 2,8 kg</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
+                                <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-gold pl-4">
+                                    "J'irradie l'harmonie en chacun et en chaque lieu. Je vous apporte ce qu'il vous manque. 
+                                    L'ancrage, la confiance en vous, en vos valeurs, et le courage de les exprimer."
+                                </blockquote>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        ✨ Équilibre
+                                    </span>
+                                    <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🌟 Harmonie
+                                    </span>
+                                    <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🏔️ Ancrage
+                                    </span>
+                                    <span class="bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🌀 Double Spirale
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="text-center">
+                                    <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
+                                        Prix sur demande
+                                    </span>
+                                    <p class="text-gray-500 text-sm mt-2">Délai de création : 8-10 semaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <div class="bg-white rounded-3xl p-8 shadow-xl max-w-2xl mx-auto">
-                    <h4 class="font-playfair text-2xl text-primary mb-4">Votre Crâne Unique</h4>
-                    <p class="text-gray-700 italic mb-6">
-                        En étant reliée à vous, dans le cœur, je me laisse guider intuitivement 
-                        vers les symboles et la roche qui vous correspondent.
+
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="relative h-96 overflow-hidden group">
+                                <img id="etoile-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_134850-748x1024.jpg" 
+                                    alt="Crâne Étoile - Vue principale" 
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
+                                    Vue 1/7
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_134850-748x1024.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-yellow-400 opacity-100"
+                                        onclick="changeMainImage('etoile', this.src, 1)"
+                                        alt="Vue 1">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191546-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 2)"
+                                        alt="Vue 2">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191541.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 3)"
+                                        alt="Vue 3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191738-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 4)"
+                                        alt="Vue 4">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191655-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 5)"
+                                        alt="Vue 5">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191617-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 6)"
+                                        alt="Vue 6">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191639-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-yellow-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('etoile', this.src, 7)"
+                                        alt="Vue 7">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-3 h-3 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
+                                <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
+                            </div>
+                            
+                            <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
+                                Crâne Étoile
+                            </h3>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">🏛️</span>
+                                    <span>Grès d'Espagne</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">📏</span>
+                                    <span>H 7 cm × L 9 cm × P 6,5 cm</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">⚖️</span>
+                                    <span>Poids approximatif : 650g</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
+                                <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-yellow-400 pl-4">
+                                    "J'illumine votre chemin, et vous éclaire dans la direction que vous vous choisissez. 
+                                    Vous êtes au centre de l'Étoile."
+                                </blockquote>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🧭 Guidance
+                                    </span>
+                                    <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        💡 Clarté
+                                    </span>
+                                    <span class="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🎯 Direction
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="text-center">
+                                    <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
+                                        Prix sur demande
+                                    </span>
+                                    <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="relative h-96 overflow-hidden group">
+                                <img id="rose-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185653-1024x922.jpg" 
+                                    alt="Crâne Rose - Vue principale" 
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-pink-400 to-rose-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
+                                    Vue 1/7
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185653-1024x922.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-pink-400 opacity-100"
+                                        onclick="changeMainImage('rose', this.src, 1)"
+                                        alt="Vue 1">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191031-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 2)"
+                                        alt="Vue 2">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185700-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 3)"
+                                        alt="Vue 3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185721-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 4)"
+                                        alt="Vue 4">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_190941-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 5)"
+                                        alt="Vue 5">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191003-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 6)"
+                                        alt="Vue 6">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_185619-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-pink-400 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('rose', this.src, 7)"
+                                        alt="Vue 7">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-3 h-3 bg-pink-400 rounded-full mr-3 animate-pulse"></div>
+                                <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
+                            </div>
+                            
+                            <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
+                                Crâne Rose
+                            </h3>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">🏛️</span>
+                                    <span>Marbre rose du Portugal</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">📏</span>
+                                    <span>H 6,3 cm × L 8,8 cm × P 6 cm</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">⚖️</span>
+                                    <span>Poids approximatif : 420g</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
+                                <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-pink-400 pl-4">
+                                    "Je suis ce que vous êtes, je manifeste l'Amour, sans artifice, sans action. 
+                                    De moi, émane la douceur d'Être."
+                                </blockquote>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        💖 Amour
+                                    </span>
+                                    <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🕊️ Douceur
+                                    </span>
+                                    <span class="bg-gradient-to-r from-pink-400/20 to-rose-500/20 border border-pink-400/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🌿 Simplicité
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="text-center">
+                                    <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
+                                        Prix sur demande
+                                    </span>
+                                    <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="relative h-96 overflow-hidden group">
+                                <img id="coeur-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-1024x663.jpg" 
+                                    alt="Crâne Cœur Lemniscate - Vue principale" 
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
+                                    Vue 1/6
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-1024x663.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-purple-500 opacity-100"
+                                        onclick="changeMainImage('coeur', this.src, 1)"
+                                        alt="Vue 1">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191236-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('coeur', this.src, 2)"
+                                        alt="Vue 2">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191359-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('coeur', this.src, 3)"
+                                        alt="Vue 3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191411-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('coeur', this.src, 4)"
+                                        alt="Vue 4">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191144-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('coeur', this.src, 5)"
+                                        alt="Vue 5">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191151-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-purple-500 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('coeur', this.src, 6)"
+                                        alt="Vue 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-3 h-3 bg-purple-500 rounded-full mr-3 animate-pulse"></div>
+                                <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
+                            </div>
+                            
+                            <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
+                                Crâne Cœur Lemniscate
+                            </h3>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">🏛️</span>
+                                    <span>Grès d'Espagne</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">📏</span>
+                                    <span>H 7 cm × L 9,5 cm × P 6,7 cm</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">⚖️</span>
+                                    <span>Poids approximatif : 680g</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
+                                <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-purple-500 pl-4">
+                                    "Je diffuse la connaissance avec la beauté du Cœur. J'apaise votre Essence et apporte 
+                                    l'harmonie par un mouvement régulier, comme un battement cosmique."
+                                </blockquote>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🧠 Connaissance
+                                    </span>
+                                    <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🦉 Sagesse
+                                    </span>
+                                    <span class="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        ∞ Infini
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="text-center">
+                                    <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
+                                        Prix sur demande
+                                    </span>
+                                    <p class="text-gray-500 text-sm mt-2">Délai de création : 6-8 semaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-32">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <div class="relative h-96 overflow-hidden group">
+                                <img id="bouche-main" src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192126-1024x840.jpg" 
+                                    alt="Crâne Bouche Ouverte - Vue principale" 
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-gray-600 to-gray-800 text-white px-4 py-2 rounded-full text-sm font-cinzel tracking-wide">
+                                    Vue 1/7
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 md:grid-cols-7 gap-3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192126-1024x840.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-gray-600 opacity-100"
+                                        onclick="changeMainImage('bouche', this.src, 1)"
+                                        alt="Vue 1">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191848-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 2)"
+                                        alt="Vue 2">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192038-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 3)"
+                                        alt="Vue 3">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191948-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 4)"
+                                        alt="Vue 4">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_191919-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 5)"
+                                        alt="Vue 5">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_192152-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 6)"
+                                        alt="Vue 6">
+                                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240624_135851-scaled.jpg" 
+                                        class="thumbnail w-full h-16 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-gray-600 opacity-70 hover:opacity-100 transition-all"
+                                        onclick="changeMainImage('bouche', this.src, 7)"
+                                        alt="Vue 7">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl">
+                            <div class="flex items-center mb-6">
+                                <div class="w-3 h-3 bg-gray-600 rounded-full mr-3 animate-pulse"></div>
+                                <span class="font-cinzel text-accent uppercase tracking-widest text-sm">Sculpture Mère</span>
+                            </div>
+                            
+                            <h3 class="font-playfair text-3xl text-primary mb-4 tracking-wide">
+                                Crâne Bouche Ouverte
+                            </h3>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">🏛️</span>
+                                    <span>Marbre noir de Belgique</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">📏</span>
+                                    <span>H 5 cm × L 8,8 cm × P 7,2 cm</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="font-cinzel text-accent mr-2">⚖️</span>
+                                    <span>Poids approximatif : 480g</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Message spirituel</h4>
+                                <blockquote class="text-gray-700 italic leading-relaxed border-l-4 border-gray-600 pl-4">
+                                    "Yeux ouverts, bouche qui clame l'interne vers l'externe, 
+                                    je diffuse ce qui Est. Je suis réceptacle et messager."
+                                </blockquote>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-playfair text-xl text-primary mb-4">Énergies & Symboles</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        🗣️ Communication
+                                    </span>
+                                    <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        📡 Transmission
+                                    </span>
+                                    <span class="bg-gradient-to-r from-gray-600/20 to-gray-800/20 border border-gray-600/30 text-primary px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                                        💫 Révélation
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-200">
+                                <div class="text-center">
+                                    <span class="font-cinzel text-2xl text-primary font-semibold tracking-wide">
+                                        Prix sur demande
+                                    </span>
+                                    <p class="text-gray-500 text-sm mt-2">Délai de création : 5-7 semaines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <div class="text-center mb-12">
+                    <h3 class="font-playfair text-3xl md:text-4xl text-primary mb-4 tracking-wide">
+                        Crânes sur Commande
+                    </h3>
+                    <p class="text-lg text-gray-600 italic">
+                        Créations uniques réalisées en communion avec votre essence
                     </p>
-                    <button class="bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-full font-cinzel tracking-wide hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                        Commander votre Crâne Mère
-                    </button>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-face3-copie-300x222.jpg" 
+                            alt="Crâne sur commande 1" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101153-225x300.jpg" 
+                            alt="Crâne sur commande 2" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-contre-plonge-copie-200x300.jpg" 
+                            alt="Crâne sur commande 3" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101220-225x300.jpg" 
+                            alt="Crâne sur commande 4" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/01/A-O-S-cosmique-Detail-serpent-copie-300x200.jpg" 
+                            alt="Crâne sur commande 5" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2025/07/20250731_101536-225x300.jpg" 
+                            alt="Crâne sur commande 6" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl max-w-2xl mx-auto">
+                        <h4 class="font-playfair text-2xl text-primary mb-4">Votre Crâne Unique</h4>
+                        <p class="text-gray-700 italic mb-6">
+                            En étant reliée à vous, dans le cœur, je me laisse guider intuitivement 
+                            vers les symboles et la roche qui vous correspondent.
+                        </p>
+                        <button class="bg-gradient-to-r from-primary to-accent text-white px-8 py-3 rounded-full font-cinzel tracking-wide hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            Commander votre Crâne Mère
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
- </section>
-    
-    <!-- Section Spiritualité -->
+    </section>
+
+    <section id="evenements" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/20">
+        <div class="max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-4 tracking-wide">
+                    Événements et Expositions
+                </h2>
+                <p class="text-xl text-gray-600 italic max-w-2xl mx-auto">
+                    Retrouvez Lise Méraud et ses créations lors de ces événements
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Symposium de Sculpture</h3>
+                    <p class="text-gray-700 mb-2">🗓️ **Dates :** 13-14 septembre 2025</p>
+                    <p class="text-gray-700 mb-2">📍 **Lieu :** Boissezon</p>
+                    <p class="text-gray-700 mb-4">✨ **Thème :** Sculpteur sur pierre</p>
+                    <a href="https://www.facebook.com/symposiumdesculpture" target="_blank" class="text-gold hover:underline font-semibold">
+                        En savoir plus sur Facebook
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Festival Sens & Nature</h3>
+                    <p class="text-gray-700 mb-2">🗓️ **Date :** Dimanche 28 septembre 2025</p>
+                    <p class="text-gray-700 mb-2">📍 **Lieu :** Toulouse</p>
+                    <p class="text-gray-700 mb-4">⏰ **Horaires :** 10h-18h</p>
+                    <a href="https://www.alternativebox.fr" target="_blank" class="text-gold hover:underline font-semibold">
+                        Entrée libre - Infos sur Facebook
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Salon Échos de l'Au-delà</h3>
+                    <p class="text-gray-700 mb-2">🗓️ **Dates :** Du 31 juillet au 2 août 2025</p>
+                    <p class="text-gray-700 mb-2">🔗 **Organisateur :** Association Valhall'Art</p>
+                    <p class="text-gray-700 mb-4">🌐 **Site web :** <a href="http://www.echosdelaudela.fr" target="_blank" class="text-gold hover:underline">echosdelaudela.fr</a></p>
+                    <a href="https://www.facebook.com/profile.php?id=61576582765792#" target="_blank" class="text-gold hover:underline font-semibold">
+                        Suivez l'événement sur Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="spiritualite" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/30 relative">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
@@ -830,7 +844,6 @@
                 </p>
             </div>
             
-            <!-- Cartes Philosophie -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="bg-white/90 p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                     <div class="text-5xl mb-6 animate-float">🌟</div>
@@ -865,7 +878,6 @@
                 </div>
             </div>
 
-            <!-- Processus de Création -->
             <div class="bg-white/80 rounded-3xl p-8 lg:p-12">
                 <h3 class="font-playfair text-3xl text-primary text-center mb-12 tracking-wide">
                     Le Processus de Création Sacrée
@@ -915,108 +927,124 @@
         </div>
     </section>
 
-    <!-- Section Artiste -->
     <section id="artiste" class="py-24 bg-gradient-to-br from-dark-bg to-gray-800 text-white">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
-                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/AtelierLM-682x1024.jpg" 
-                         alt="Lise Méraud dans son atelier" 
-                         class="w-full h-96 lg:h-[600px] object-cover rounded-2xl shadow-2xl"
-                         loading="lazy">
+                    <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/AtelierLM-682x1024.jpg"
+                        alt="Lise Méraud dans son atelier"
+                        class="w-full h-96 lg:h-[600px] object-cover rounded-2xl shadow-2xl"
+                        loading="lazy">
                 </div>
                 <div class="order-1 lg:order-2">
-                   <h2 class="font-playfair text-4xl md:text-5xl text-gold mb-4 tracking-wide">
-                       Lise Méraud
-                   </h2>
-                   <h3 class="font-cinzel text-2xl text-secondary mb-8 tracking-wide">
-                       Sculptrice de l'Âme
-                   </h3>
-                   <div class="space-y-6 text-gray-300 leading-relaxed">
-                       <p>
-                           Bercée dès mon plus jeune âge par les arts, les cultures du monde, les civilisations anciennes, 
-                           les symboles, l'ésotérisme, j'ai toujours aspiré être au service de la Source.
-                       </p>
-                       <p>
-                           Formée à la taille de pierre chez les Compagnons du Devoir à l'âge de 19 ans, 
-                           avec l'esprit d'un œuvrier du moyen-âge, bâtisseur de cathédrale, 
-                           je rêvais de me fondre dans le Grand Tout.
-                       </p>
-                       <p>
-                           Ces sculptures sont taillées dans le recueillement profond du cœur, 
-                           à l'écoute du chant de l'univers. Les motifs gravés sont des symboles vivants, 
-                           un langage, comme une musique qui parle à notre âme.
-                       </p>
-                   </div>
-                   <div class="mt-8">
-                       <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_193236-1024x577.jpg" 
-                            alt="Atelier de Lise" 
-                            class="w-full h-48 object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300"
-                            loading="lazy">
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+                    <h2 class="font-playfair text-4xl md:text-5xl text-gold mb-4 tracking-wide">
+                        Lise Méraud
+                    </h2>
+                    <h3 class="font-cinzel text-2xl text-secondary mb-8 tracking-wide">
+                        Sculptrice de l'Âme
+                    </h3>
+                    <div class="space-y-6 text-gray-300 leading-relaxed">
+                        <p>
+                            Bercée dès mon plus jeune âge par les arts, les cultures du monde, les civilisations anciennes, 
+                            les symboles, l'ésotérisme, j'ai toujours aspiré être au service de la Source.
+                        </p>
+                        <p>
+                            Formée à la taille de pierre chez les Compagnons du Devoir à l'âge de 19 ans, 
+                            avec l'esprit d'un œuvrier du moyen-âge, bâtisseur de cathédrale, 
+                            je rêvais de me fondre dans le Grand Tout.
+                        </p>
+                        <p>
+                            Ces sculptures sont taillées dans le recueillement profond du cœur, 
+                            à l'écoute du chant de l'univers. Les motifs gravés sont des symboles vivants, 
+                            un langage, comme une musique qui parle à notre âme.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <img src="https://tamboursdelaterre.com/wp-content/uploads/2024/06/20240518_193236-1024x577.jpg"
+                                alt="Atelier de Lise"
+                                class="w-full h-48 object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300"
+                                loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <!-- Section Contact -->
-   <section id="contact" class="py-24 bg-light-bg text-center">
-       <div class="max-w-4xl mx-auto px-4 lg:px-8">
-           <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-8 tracking-wide">
-               Commander une Sculpture
-           </h2>
-           <p class="text-xl text-gray-600 mb-12 italic max-w-2xl mx-auto leading-relaxed">
-               Commander une sculpture d'un crâne est une démarche transformatrice, 
-               une rencontre profonde avec vous-même.
-           </p>
-           
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-               <div class="bg-white p-8 rounded-2xl shadow-lg">
-                   <h3 class="font-cinzel text-2xl text-accent mb-6 tracking-wide">Lise Méraud</h3>
-                   <div class="space-y-4">
-                       <p class="text-gray-700">
-                           <a href="tel:0650888324" class="text-primary hover:text-accent transition-colors duration-300 font-medium">
-                               06 50 88 83 24
-                           </a>
-                       </p>
-                       <p class="text-gray-700">
-                           <a href="mailto:lisemeraud@orange.fr" class="text-primary hover:text-accent transition-colors duration-300 font-medium">
-                               lisemeraud@orange.fr
-                           </a>
-                       </p>
-                   </div>
-               </div>
-               
-               <div class="bg-white p-8 rounded-2xl shadow-lg">
-                   <h3 class="font-cinzel text-2xl text-accent mb-6 tracking-wide">Tarifs</h3>
-                   <div class="space-y-3 text-gray-700">
-                       <p>Petits crânes : <span class="font-semibold text-primary">800€ - 2200€</span></p>
-                       <p>Grands crânes : <span class="font-semibold text-primary">3000€ - 8000€</span></p>
-                       <p>Délai : <span class="font-semibold text-primary">5 à 10 semaines</span></p>
-                   </div>
-               </div>
-           </div>
-           
-           <!-- Citation inspirante -->
-           <div class="mt-16 bg-gradient-to-r from-primary/10 to-gold/10 p-8 rounded-2xl">
-               <blockquote class="text-xl italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                   "Avec l'esprit d'un œuvrier du moyen-âge, bâtisseur de cathédrale, je rêvais de me fondre dans le Grand Tout. 
-                   Ma boussole intérieure pointée vers la lumière."
-               </blockquote>
-               <cite class="block mt-4 font-cinzel text-gold tracking-wide">- Lise Méraud</cite>
-           </div>
-       </div>
-   </section>
+    <section id="contact" class="py-24 bg-light-bg text-center">
+        <div class="max-w-4xl mx-auto px-4 lg:px-8">
+            <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-8 tracking-wide">
+                Commander une Sculpture
+            </h2>
+            <p class="text-xl text-gray-600 mb-12 italic max-w-2xl mx-auto leading-relaxed">
+                Commander une sculpture d'un crâne est une démarche transformatrice, 
+                une rencontre profonde avec vous-même.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-cinzel text-2xl text-accent mb-6 tracking-wide">Lise Méraud</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700">
+                            <a href="tel:0650888324" class="text-primary hover:text-accent transition-colors duration-300 font-medium">
+                                06 50 88 83 24
+                            </a>
+                        </p>
+                        <p class="text-gray-700">
+                            <a href="mailto:lisemeraud@orange.fr" class="text-primary hover:text-accent transition-colors duration-300 font-medium">
+                                lisemeraud@orange.fr
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-cinzel text-2xl text-accent mb-6 tracking-wide">Tarifs</h3>
+                    <div class="space-y-3 text-gray-700">
+                        <p>Petits crânes : <span class="font-semibold text-primary">800€ - 2200€</span></p>
+                        <p>Grands crânes : <span class="font-semibold text-primary">3000€ - 8000€</span></p>
+                        <p>Délai : <span class="font-semibold text-primary">5 à 10 semaines</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gradient-to-r from-primary/10 to-gold/10 p-8 rounded-2xl">
+                <blockquote class="text-xl italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    "Avec l'esprit d'un œuvrier du moyen-âge, bâtisseur de cathédrale, je rêvais de me fondre dans le Grand Tout. 
+                    Ma boussole intérieure pointée vers la lumière."
+                </blockquote>
+                <cite class="block mt-4 font-cinzel text-gold tracking-wide">- Lise Méraud</cite>
+            </div>
+        </div>
+    </section>
 
-   <!-- Footer -->
-   <footer class="bg-dark-bg text-gray-400 py-8">
-       <div class="max-w-6xl mx-auto px-4 lg:px-8 text-center">
-           <p class="font-cinzel text-gold text-lg tracking-wide mb-2">Lise Méraud</p>
-           <p class="text-sm">Crânes en Pierre Sacrée - Sculptures de l'Âme</p>
-       </div>
-   </footer>
+    <footer class="bg-dark-bg text-gray-400 py-8">
+        <div class="max-w-6xl mx-auto px-4 lg:px-8 text-center">
+            <p class="font-cinzel text-gold text-lg tracking-wide mb-2">Lise Méraud</p>
+            <p class="text-sm">Crânes en Pierre Sacrée - Sculptures de l'Âme</p>
+        </div>
+    </footer>
 
-   <!-- JavaScript -->
-   <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        function changeMainImage(idPrefix, newSrc, newIndex) {
+            const mainImage = document.getElementById(idPrefix + '-main');
+            if (mainImage) {
+                mainImage.src = newSrc;
+            }
+            // Update the index display if needed
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
