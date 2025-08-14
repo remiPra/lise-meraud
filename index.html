@@ -787,7 +787,6 @@
             </div>
         </div>
     </section>
-    
     <section id="evenements" class="py-24 bg-gradient-to-br from-gray-50 to-secondary/20">
         <div class="max-w-6xl mx-auto px-4 lg:px-8">
             <div class="text-center mb-16">
@@ -802,12 +801,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Symposium de Sculpture -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="flex gap-6">
-                        <img src="assets/SYMPOSIUM_DE_SCULPTURE.jpeg" 
-                             alt="Affiche Symposium de Sculpture" 
-                             class="w-64 h-88 object-cover rounded-lg flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                             onclick="openModal('symposium')">
-                        <div class="flex-1">
+                    <div class="flex flex-col lg:flex-row lg:gap-6">
+                        <div class="flex justify-center lg:justify-start mb-6 lg:mb-0">
+                            <img src="assets/SYMPOSIUM_DE_SCULPTURE.jpeg" 
+                                 alt="Affiche Symposium de Sculpture" 
+                                 class="w-32 h-32 lg:w-64 lg:h-88 object-cover rounded-full lg:rounded-lg border-4 border-primary lg:border-0 flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                                 onclick="openModal('symposium')">
+                        </div>
+                        <div class="flex-1 text-center lg:text-left">
                             <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Symposium de Sculpture</h3>
                             <p class="text-gray-700 mb-2">Dates : 13-14 septembre 2025</p>
                             <p class="text-gray-700 mb-2">Lieu : Boissezon</p>
@@ -821,12 +822,14 @@
     
                 <!-- Festival Sens & Nature -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="flex gap-6">
-                        <img src="./assets/FESTIVAL_SENS_ET_NATURE.jpeg" 
-                             alt="Affiche Festival Sens & Nature" 
-                             class="w-64 h-88 object-cover rounded-lg flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                             onclick="openModal('festival')">
-                        <div class="flex-1">
+                    <div class="flex flex-col lg:flex-row lg:gap-6">
+                        <div class="flex justify-center lg:justify-start mb-6 lg:mb-0">
+                            <img src="./assets/FESTIVAL_SENS_ET_NATURE.jpeg" 
+                                 alt="Affiche Festival Sens & Nature" 
+                                 class="w-32 h-32 lg:w-64 lg:h-88 object-cover rounded-full lg:rounded-lg border-4 border-primary lg:border-0 flex-shrink-0 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                                 onclick="openModal('festival')">
+                        </div>
+                        <div class="flex-1 text-center lg:text-left">
                             <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Festival Sens & Nature</h3>
                             <p class="text-gray-700 mb-2">Date : Dimanche 28 septembre 2025</p>
                             <p class="text-gray-700 mb-2">Lieu : Toulouse</p>
@@ -841,7 +844,7 @@
                 <!-- Salon Échos de l'Au-delà -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300 lg:col-span-2">
                     <div class="flex gap-6 justify-center">
-                        <div class="max-w-md">
+                        <div class="max-w-md text-center">
                             <h3 class="font-cinzel text-xl text-accent mb-4 tracking-wide">Salon Échos de l'Au-delà</h3>
                             <p class="text-gray-700 mb-2">Dates : Du 31 juillet au 2 août 2025</p>
                             <p class="text-gray-700 mb-2">Organisateur : Association Valhall'Art</p>
